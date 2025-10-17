@@ -1,15 +1,17 @@
-
+/* === Fonts === */
 @font-face {
     font-family: "Play-Write";
     src: url("/fonts/PlaywriteUSModern-Regular.woff2") format("woff2");
 }
 
+/* === Base Styles === */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* === Header / Hero Section === */
 header {
     position: relative;
     width: 100%;
@@ -17,21 +19,18 @@ header {
 }
 
 .hero-image {
-    width: 25%;
-    height: 100vh;
-    position:absolute;
+    position: absolute;
     width: 100%;
+    height: 100vh;
 }
 
 .odin-logo {
     position: absolute;
-    /*right: 14%;*/
     top: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.479);
-
 }
 
 .odin-logo > img {
@@ -44,8 +43,59 @@ header {
     font-family: "Play-Write", cursive;
 }
 
+/* === Main / Footer Section === */
 .main-footer-section {
+    display: flex;
+    flex-direction: column;
     flex: 3;
-    margin: 70px;
+    /*margin: 70px;*/
+    height: 100vh;
+    /*justify-content: space-evenly;*/
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    flex: 1;
+}
+
+.info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 239, 239);
+    justify-content: center;
+    padding: 7% 0 3% 3%;
+}
+
+.info-section > p {
+    max-width: 55ch;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.form-section {
+    flex: 1;
+    padding: 0 5% 5% 5%;
+}
+
+form {
+    display: flex;
+    gap: 50px;
+    font-size: 0.85rem;
+}
+
+.first-form-group,
+.second-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    display: block;
+}
