@@ -31,7 +31,7 @@ body {
 .logo > p {
     color: white;
     font-family: Play-write, cursive;
-    font-size: 3rem;
+    font-size: clamp(0.5rem,4vw, 3rem);
 }
 
 .odin-logo {
@@ -65,10 +65,9 @@ main {
     font-size: 1.4rem;
     font-weight:600;
     font-family: sans-serif;
-    margin: 7% 0 0 7%;
+   
 }
 
-.info-section > p:first-child{
-    margin: 7% 0 0 7%;
+.info-section > p{
+    margin: 7% 0 3% 4%;
 }
-
