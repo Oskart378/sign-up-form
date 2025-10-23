@@ -1,18 +1,23 @@
-
+/* === Fonts === */
 @font-face {
     font-family: Play-Write;
     src: url("/fonts/PlaywriteUSModern-Regular.woff2") format("woff2");
 }
 
-p {
-    font-family: Arial, Helvetica, sans-serif;
+/* === Global Styles === */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* === Hero Section === */
 .hero {
     position: relative;
     flex: 3;
@@ -21,58 +26,63 @@ body {
     min-width: 200px;
 }
 
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .logo {
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
     top: 15%;
-    background-color: rgba(0, 0, 0, 0.61);
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+    padding: 0.5rem;
     overflow: hidden;
 }
 
 .logo > p {
     color: white;
-    font-family: Play-write, cursive;
-    font-size: clamp(0.5rem,4vw, 3rem);
+    font-family: "Play-Write", cursive;
+    font-size: clamp(0.5rem, 4vw, 3rem);
+    transition: font-size 0.3s ease;
 }
 
 .odin-logo {
     width: 25%;
 }
 
-.hero-image {
-    width: 100%;
-}
-
+/* === Main Section === */
 main {
     flex: 7;
     display: flex;
     flex-direction: column;
 }
 
-.form-section, 
+/* Sections */
+.info-section,
+.form-section,
 .cta-section {
     flex: 1;
 }
 
+/* Info Section */
 .info-section {
     background-color: rgb(238, 238, 238);
-    
-}
-
-.info-section > p{
-    width: 51.8ch;
-    font-size: clamp(0.8rem, 2vw,1.4rem);
-    font-weight:600;
-    font-family: sans-serif;
-   
-}
-
-.info-section {
     padding: 9% 0 2% 4%;
 }
 
+.info-section > p {
+    width: 51.8ch;
+    font-size: clamp(0.8rem, 2vw, 1.4rem);
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+/* Form Section */
 .form-section {
     padding: 1% 0 3% 4%;
     box-shadow: 0 2px 5px rgb(155, 155, 155);
@@ -82,7 +92,6 @@ main {
 form {
     display: flex;
     flex-direction: column;
-   
     gap: 20px;
 }
 
@@ -98,9 +107,10 @@ input[type="password"],
 input[type="tel"] {
     outline: none;
     width: 30ch;
-    border-width: 1px;
+    border: 1px solid #ccc;
     padding: 5px;
     border-radius: 4px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 input[type="password"]:invalid {
@@ -110,26 +120,27 @@ input[type="password"]:invalid {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus{
     border-color: blue;
     box-shadow: 3px 3px 3px rgb(204, 204, 204);
-} 
+}
 
 
-
-
+/* Labels */
 label {
     display: block;
     font-size: 0.7rem;
-    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 2px;
 }
 
+/* Headings */
 h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1rem, 2vw, 1.8rem)
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    margin: 0 0 1rem 0;
 }
 
+/* CTA Section */
 .cta-section {
     padding: 3% 0 0 4%;
     background-color: rgb(238, 238, 238);
@@ -143,6 +154,12 @@ h1 {
     color: white;
     font-weight: bold;
     font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #475b36;
 }
 
 .cta-section a {
